@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HomePage from "./Components/HomePage";
+import DashBoard from "./Components/DashBoard";
+import { Routes, Route } from "react-router-dom";
+import Login from "./Components/Login";
+import DashBoardFriends from "./Components/DashBoardFriends";
+import DashboardTransaction from "./Components/DashboardTransaction";
+import DashboardGroups from "./Components/DashboardGroups";
+import Group from "./Components/Group";
+import CreateGroup from "./Components/CreateGroup";
+import JoinGroup from "./Components/JoinGroup";
+import Settings from "./Components/Settings";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/HomeLogin" element={<Login />} />
+        <Route path="/Dashboard" element={<DashBoard />} />
+        <Route path="/DashboardFriends" element={<DashBoardFriends />} />
+        <Route
+          path="/DashboardTransaction"
+          element={<DashboardTransaction />}
+        />
+        <Route path="/DashboardGroups" element={<DashboardGroups />} />
+        <Route path="/group" element={<Group />} />
+        <Route path="/CreateGroup" element={<CreateGroup />} />
+        <Route path="/joingroup" element={<JoinGroup />} />
+        <Route path="/Settings" element={<Settings />} />
+
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 }
 

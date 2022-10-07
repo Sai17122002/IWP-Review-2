@@ -1,38 +1,120 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid #743f11;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  list-style-type: none;
+  transition: all 0s linear;
+}
+
+.parent-homepage {
+  margin-bottom: 50px;
+}
+
+html {
+  /* font-size: 62.5%; */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  background: #eee;
+}
+
+.home,
+.aboutus {
+  padding: 1.5rem;
+}
+
+.heading {
   text-align: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+  /* color:  */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading span {
+  background: #1b7ced;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 15rem;
+  grid-gap: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.boxes div {
+  background: white;
+  border: 0.25rem solid whitesmoke;
+  text-align: center;
+  outline: 6px solid white;
+  height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.boxes div h1 {
+  margin: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.boxes .boxes-heading {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.boxes .boxes-maincontent {
+  font-size: 1.7rem;
+  padding: 0 10rem;
+  line-height: 2.5rem;
+}
+
+.boxes div:hover {
+  outline: var(--outline-hover);
+  outline-offset: 0rem;
+}
+
+.boxes span {
+  cursor: pointer;
+  line-height: 50px;
+}
+
+.boxes span:hover {
+  color: var(--orange);
+}
+
+.boxes h1 {
+  color: #130f40;
+  margin-top: 1rem;
+  font-weight: bolder;
+}
+
+.boxes p {
+  color: var(--light-color);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+
+.boxes a {
+  margin: 2rem 0;
 }
